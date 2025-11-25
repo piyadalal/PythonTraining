@@ -17,12 +17,13 @@ except SystemExit:
     print("You must enter an Integer")
 
 number = int(var)
+print(list(range(number)))
 #stop = 0 or 1
 if number % 2 == 0:
     stop = -2
 else:
     stop = 0
 
-for i in range(number, stop, -2):
+for i in range(number,):
     print(i)
 
