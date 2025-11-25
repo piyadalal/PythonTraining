@@ -2,17 +2,25 @@
 
 Belgium = 'Belgium,10445852,Brussels,737966,Europe,1830,Euro,Catholicism,Dutch,French,German'
 
-# 1. Line of hyphens
 print("-" * len(Belgium))
 
-# 2. Replace commas with colons
+
 print(Belgium.replace(",", ":"))
 
-# 3. Sum populations
-fields = Belgium.split(",")
-population = int(fields[1])
-capital_pop = int(fields[3])
-print(population + capital_pop)
 
-# 4. Line of hyphens
+fields = Belgium.split(",")
+
+
+try:
+    country_population = int(fields[1])
+    capital_population = int(fields[3])
+except ValueError:
+    print("Error: Population fields are not numeric!")
+    country_population = 0
+    capital_population = 0
+
+
+print(country_population + capital_population)
+
+
 print("-" * len(Belgium))
