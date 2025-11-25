@@ -1,9 +1,8 @@
 # Open the file with latin-1 encoding
-with open('messier.txt', encoding='latin_1') as file:
-    for line in file:
-        line = line.strip()  # Remove leading/trailing whitespace
-        if not line:
-            continue  # Skip empty lines
+for line in open('messier.txt', encoding='latin_1'):
+    if not line:
+        break
+    else:
         if not line.startswith('M'):
             continue  # Skip lines not starting with 'M'
 

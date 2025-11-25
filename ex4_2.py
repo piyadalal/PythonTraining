@@ -6,10 +6,12 @@
     DocString
 """
 # Open the file with latin-1 encoding
-with open('messier.txt', encoding='latin_1') as file:
-    for line in file:
+for line in open('messier.txt', encoding='latin_1'):
+    if not line:
+        break
+    else:
         line = line.rstrip()  # remove trailing newline and spaces
-        if not line or not line.startswith('M'):
+        if not line.startswith('M'):
             continue  # skip empty lines or non-Messier lines
 
         # Fixed-width slicing based on the format you provided
