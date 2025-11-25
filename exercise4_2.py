@@ -4,15 +4,16 @@ for line in open('messier.txt', encoding='latin_1'):
         break
     else:
         if not line.startswith('M'):
-            continue  # Skip lines not starting with 'M'
+            continue
 
-        # Split the line into fields
+
         fields = line.split()  # Default splits on whitespace
+        print(fields)
 
-        # Messier Number is always the first field
+
         messier_number = fields[0]
 
-        # Common name: may be missing
+
         if len(fields) == 4:
             common_name = fields[1]
             object_type = fields[2]
@@ -26,4 +27,4 @@ for line in open('messier.txt', encoding='latin_1'):
             continue
 
         # Print using '|' delimiters
-        print(f"|{messier_number}|{common_name}|{object_type}|{constellation}|")
+        #print(f"|{messier_number}|{common_name}|{object_type}|{constellation}|")
