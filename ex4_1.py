@@ -1,4 +1,6 @@
-Belgium = "Belgium,11184819,Brussels,1800000"
+#! /usr/bin/python
+
+Belgium = 'Belgium,10445852,Brussels,737966,Europe,1830,Euro,Catholicism,Dutch,French,German'
 
 # 1. Line of hyphens
 print("-" * len(Belgium))
