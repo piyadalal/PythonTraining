@@ -1,10 +1,11 @@
 #! /usr/bin/python
 
 Belgium = 'Belgium,10445852,Brussels,737966,Europe,1830,Euro,Catholicism,Dutch,French,German'
-
+print(len(Belgium))
 print("-" * len(Belgium))
 
-
+new_list = ":".join(Belgium.split(","))
+print(new_list)
 print(Belgium.replace(",", ":"))
 
 
