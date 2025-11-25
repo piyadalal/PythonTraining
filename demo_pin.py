@@ -5,12 +5,14 @@
 """
     DocString
 """
+import getpass
+
 master_pin = "0123"
 pin = None
 attempts = 0
 
 while pin != master_pin and attempts < 3:
-    pin = input("enter pin = ")
+    pin = getpass.getpass("enter pin = ")
     if pin == master_pin:
         print("valid pin")
         break # correct master pin breaks out

@@ -23,6 +23,6 @@ if number % 2 == 0:
 else:
     stop = 0
 
-for i in range(number, -2):
+for i in range(number, stop, -2):
     print(i)
 
