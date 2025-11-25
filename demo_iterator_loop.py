@@ -1,9 +1,10 @@
 #! /usr/bin/env python3
 # Author: PDalal
 # Version: 1.0
-# Description: This script will demo HowTo
+# Description: This script will demo HowTo iterate through sequences
+# str,tuple,list,dict,set using an iterator for loop
 """
-    DocString
+    Code template for coder , DocString for user
 """
 students = ["a", "b", "c", "d"]
 for name in students:
