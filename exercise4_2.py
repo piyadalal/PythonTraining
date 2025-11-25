@@ -1,19 +1,18 @@
-# Open the file with latin-1 encoding
+
 with open('messier.txt', encoding='latin_1') as file:
     for line in file:
-        line = line.strip()  # Remove leading/trailing whitespace
+        line = line.strip()
         if not line:
-            continue  # Skip empty lines
+            continue
         if not line.startswith('M'):
-            continue  # Skip lines not starting with 'M'
+            continue
 
-        # Split the line into fields
-        fields = line.split()  # Default splits on whitespace
 
-        # Messier Number is always the first field
+        fields = line.split()
+
+
         messier_number = fields[0]
 
-        # Common name: may be missing
         if len(fields) == 4:
             common_name = fields[1]
             object_type = fields[2]
@@ -23,8 +22,8 @@ with open('messier.txt', encoding='latin_1') as file:
             object_type = fields[1]
             constellation = fields[2]
         else:
-            # Handle unexpected format
+
             continue
 
-        # Print using '|' delimiters
+
         print(f"|{messier_number}|{common_name}|{object_type}|{constellation}|")
