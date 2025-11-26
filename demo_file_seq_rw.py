@@ -45,3 +45,12 @@ print("-" * 50)
 
 print("This goes to stdout", file=fh_out)
 print("This is an error", file=sys.stderr)
+
+#Block scope to make file handle close automaticlly after block ends
+with open("movies.txt", mode='rt', buffering=1) as fh_in:
+    for line in fh_in:
+        if "eric" in line:
+            print(line)
+            break
+    #end of block file handle will auto close
+    # or del fh_in
