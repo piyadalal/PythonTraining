@@ -7,6 +7,7 @@ fh_in = open(r"/Users/prda5207/PycharmProjects/PythonTraining/VM_code/words", mo
 
 
 for line in fh_in:
+    m = re.search("^ring$")
     #m = re.search("^ring$")
     #m = re.search("^.ing$", line)
     # Match lines of 4 chars ending with 'i x2 ^ v
