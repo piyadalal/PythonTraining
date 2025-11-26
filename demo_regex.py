@@ -25,7 +25,10 @@ for line in fh_in:
     #m = re.search("^[A-Z].*[A-Z]$", line)  # Match lines starting with a CAPITAL
     #m = re.search("^[A-Z].?[A-Z]$", line)  # Match lines starting with a CAPITAL and end with caps maybe one or none
     #m = re.search("[A-Z]$", line)  # ending with caps
-    m = re.search(r"^(.)(.).\2\1$", line) # takes 2 and 1 as escape : \2 : \u0002 : \x02 : \2, put an r as raw string
+    #m = re.search(r"^(.)(.).\2\1$", line) # takes 2 and 1 as escape : \2 : \u0002 : \x02 : \2, put an r as raw string
+    #m = re.search(r"^(.)(.).\2\1$", line)
+    m = re.match("([A-Z]).*\1$", line)# takes 2 and 1 as escape : \2 : \u0002 : \x02 : \2, put an r as raw string
+    m = re.fullmatch("([A-Z]).*\1$\n", line)# takes 2 and 1 as escape : \2 : \u0002 : \x02 : \2, put an r as raw string
     #m = re.search(r"^([A-Z]).*\1$", line) # takes 2 and 1 as escape : \2 : \u0002 : \x02 : \2, put an r as raw string
     #r"^(.) (.) (.) \3 \2 \1$"
 
