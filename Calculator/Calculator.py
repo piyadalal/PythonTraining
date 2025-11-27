@@ -3,7 +3,8 @@ import app.basic
 import app.basic as basic
 import app.adv  as adv
 from app.basic import add, mul, div
-
+from app.basic import * # imports functions into main namespace creates clashes your functions overrides
+#python -m app.basic : imports
 # imports import all the identifiers and executes all print statements and
 # has sys.exit() so it terminates by only printing the print statements and tgen exit
 def main():
