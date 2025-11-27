@@ -20,6 +20,29 @@ def frange(start,stop,step=0.25):
                 yield round(float(start),10)
                 start += step
 
+def frange_enhanced(start,stop,step=0.25):
+    """
+
+    :param start: start value
+    :param stop: stop value
+    :param step: increment value
+    :return: next value in the range using yield
+    """
+
+    if stop is None:
+        stop == 0
+        # empty list
+    else:
+        # check for positive or negative step
+        if step > 0:
+            while start < stop:
+                yield round(float(start),10)
+                start += step
+        else:
+            while start > stop:
+                yield round(float(start),10)
+                start += step
+
 #Test Conditions
 print(list(frange(1.1, 3)))
 print(list(frange(1, 3, 0.33)))
