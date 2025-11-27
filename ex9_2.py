@@ -11,7 +11,6 @@ def frange(start, stop=None, step=0.25):
     else:
         start = float(start)
         stop = float(stop)
-
     step = float(step)
 
     # Protect against step=0

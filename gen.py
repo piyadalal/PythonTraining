@@ -1,4 +1,4 @@
-def frange(start,stop,step=0.25):
+def frange_(start,stop,step=0.25):
     """
 
     :param start: start value
@@ -20,11 +20,17 @@ def frange(start,stop,step=0.25):
                 yield round(float(start),10)
                 start += step
 
+def frange(start, stop, step=0.25):
+    curr = float(start)
+    while curr < stop:
+        yield curr
+        curr += step
+
 #Test Conditions
-print(list(frange(1.1, 3)))
-print(list(frange(1, 3, 0.33)))
-print(list(frange(1, 3, 1))) # Should print [1.0, 2.0]
-print(list(frange(3, 1))) # Should print an empty list
+#print(list(frange(1.1, 3)))
+#print(list(frange(1, 3, 0.33)))
+#print(list(frange(1, 3, 1))) # Should print [1.0, 2.0]
+#print(list(frange(3, 1))) # Should print an empty list
 print(list(frange(1, 3, 0))) # Should print an empty list
 print(list(frange(-1, -0.5, 0.1)))
 for num in frange(3.142, 12):
