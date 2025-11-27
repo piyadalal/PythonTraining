@@ -12,10 +12,16 @@ def sqrt(x):
     """ Return of x as a float """
     return float(x**0.5)
 
-print("------------ Adv Calc App ------------")
-print(f"9 ** 8 = {power(9, 8)}")
-print(f"9 % 8 = {mod(9, 8)}")
-print(f"\N{square root}9 = {sqrt(9)}")
-print("--------------------------------------")
+def main():
+    print("------------ Adv Calc App ------------")
+    print(f"9 ** 8 = {power(9, 8)}")
+    print(f"9 % 8 = {mod(9, 8)}")
+    print(f"\N{square root}9 = {sqrt(9)}")
+    print("--------------------------------------")
+    return None
 
-sys.exit(0) # Explicit EXIT with return code (0=success, 1-255=error)
+
+
+if __name__ == "__main__":
+    main()
+    sys.exit(0)

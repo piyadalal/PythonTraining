@@ -23,10 +23,15 @@ def div (x,z):
     """Return quotient of x divided b z to 3 decimal places parameters"""
     return round(x/z, 3)
 
-print("********** Basic Calc App ************")
-print(f"4 + 3 + 2 + 1 = {add(4, 3, 2, 1)}")
-print(f"4 * 3 * 2 = {mul(4, 3, 2)}")
-print(f"4 / 3 = {div(4, 3)}")
-print("***************************************")
 
-sys.exit(0) # Explicit EXIT with return code (0=success, 1-255=error)
+def main():
+    print("********** Basic Calc App ************")
+    print(f"4 + 3 + 2 + 1 = {add(4, 3, 2, 1)}")
+    print(f"4 * 3 * 2 = {mul(4, 3, 2)}")
+    print(f"4 / 3 = {div(4, 3)}")
+    print("***************************************")
+    return None
+
+if __name__ == "__main__":
+    main()
+    sys.exit(0) # Explicit EXIT with return code (0=success, 1-255=error)
